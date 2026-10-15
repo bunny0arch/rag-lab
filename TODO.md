@@ -1,0 +1,9 @@
+# RAG Lab TODO
+
+- [ ] **Document ingestion and library:** allow users to upload TXT, Markdown, and HTML immediately; validate file size/type; extract text; create chunks with configurable size/overlap; preserve filename, type, section, and page metadata where available; show ingestion states, chunk counts, errors, delete, and reset-to-sample-data; prevent uncontrolled duplicates.
+- [ ] **Traditional Search:** search the indexed passages using BM25-style lexical ranking; return ranked excerpts, matched terms, source metadata, result counts, and actual execution time; do not synthesize an answer with an LLM.
+- [ ] **RAG retrieval and generation:** create TF-IDF vector representations for the same chunks, retrieve by cosine similarity, optionally fuse dense and BM25 results, assemble bounded context, call an OpenAI-compatible LLM when configured, validate citation IDs, and honestly disclose missing model configuration or insufficient evidence.
+- [ ] **Comparison workspace:** run the same captured query through both pipelines, show independent loading/error states, measured timings, retrieved evidence, citations, expandable source passages, and an evidence-based comparison summary.
+- [ ] **Pipeline inspector and settings:** show real pipeline stages, scores, counts, context, prompt, response status, and timings; make top-k, chunk size, overlap, hybrid toggle, temperature, and context budget affect execution or disclose unsupported settings.
+- [ ] **Sample corpus and demos:** ship 8 searchable documents covering RAG, embeddings, chunking, BM25, hybrid retrieval, reranking, grounding, evaluation, latency, and updates; include exact-keyword and unsupported-question demos.
+- [ ] **Delivery quality:** include README, `.env.example`, route manifest, tests for search/RAG honesty/deletion/error paths, and verify the app serves on the configured managed runtime port.
